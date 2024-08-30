@@ -2,9 +2,9 @@ package autoTest;
 
 public class GamesMonty {
 
-    public GamesMonty() {;
+    public GamesMonty() {
+        ;
     }
-
 
     public int singlePickChoiceWinning(Player player, int numberOfRounds) {
         int wins = 0;
@@ -12,7 +12,7 @@ public class GamesMonty {
             Doors doors = new Doors();
             int choiceDoor = player.choiceDoor();
             if (doors.getDoor(choiceDoor).isPrizeDoor()) {
-                wins +=1;
+                wins += 1;
             }
         }
         return wins;
@@ -26,10 +26,9 @@ public class GamesMonty {
             int noPrizeDoor = doors.noPrizeDoor(choiceDoor);
             int newSelect = player.choiceNewDoor(noPrizeDoor, choiceDoor);
             if (doors.getDoor(newSelect).isPrizeDoor()) {
-                wins +=1;
+                wins += 1;
             }
         }
         return wins;
     }
 }
-
