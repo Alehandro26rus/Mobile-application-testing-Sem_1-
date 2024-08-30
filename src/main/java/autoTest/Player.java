@@ -19,4 +19,3 @@ public class Player {
         return 3 - secondChoiceDoor - firstChoiceDoor;
     }
 }
-
