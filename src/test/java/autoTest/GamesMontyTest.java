@@ -14,20 +14,17 @@ public class GamesMontyTest {
     Player singlePickPlayer;
     Player rePickPlayer;
 
-
     @Test
     void withPrizeDoor() {
         Door withPrize = new Door(true);
         assertTrue(withPrize.isPrizeDoor());
     }
 
-
     @Test
     void withoutPrizeDoor() {
         Door withoutPrize = new Door(false);
         assertFalse(withoutPrize.isPrizeDoor());
     }
-
 
     @Test
     void selectNewDoorReturnsExpectedIndex() {
@@ -36,9 +33,8 @@ public class GamesMontyTest {
         Assertions.assertEquals(newChoice, 2);
     }
 
-
     @ParameterizedTest
-    @ValueSource(ints = {0, 1, 2})
+    @ValueSource(ints = { 0, 1, 2 })
     void getNoPrizeDoorIndex() {
         Doors doors = new Doors();
         int selectDoorIndex = 1;
@@ -46,15 +42,13 @@ public class GamesMontyTest {
         Assertions.assertNotEquals(selectDoorIndex, noPrizeDoorIndex);
     }
 
-
     @RepeatedTest(10)
     void numberOfWinsWithoutChangingChoice() {
         singlePickPlayer = new Player();
         GamesMonty gamesMontySingle = new GamesMonty();
         int winsSinglePick = gamesMontySingle.singlePickChoiceWinning(singlePickPlayer, 1000);
-        assertTrue(winsSinglePick  < 400);
+        assertTrue(winsSinglePick < 400);
     }
-
 
     @RepeatedTest(10)
     void numberOfWinsWithChangingChoice() {

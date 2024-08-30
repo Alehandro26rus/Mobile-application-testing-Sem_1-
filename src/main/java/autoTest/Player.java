@@ -1,3 +1,4 @@
+
 package autoTest;
 
 import java.util.Random;
@@ -18,3 +19,4 @@ public class Player {
         return 3 - secondChoiceDoor - firstChoiceDoor;
     }
 }
+

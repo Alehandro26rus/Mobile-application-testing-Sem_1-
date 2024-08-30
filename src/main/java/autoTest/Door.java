@@ -12,3 +12,4 @@ public class Door {
         return isPrizeDoor;
     }
 }
+
